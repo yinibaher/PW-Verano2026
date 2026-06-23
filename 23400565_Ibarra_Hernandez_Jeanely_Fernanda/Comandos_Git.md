@@ -85,13 +85,37 @@ Muestra el historial completo de commits realizados en el repositorio. Incluye i
 El desarrollador necesita identificar quién realizó una determinada modificación.
 
 ### 15. git stash
+Guarda temporalmente cambios no confirmados para limpiar el directorio de trabajo sin perder información. Los cambios almacenados pueden recuperarse posteriormente, lo que resulta muy útil cuando es necesario cambiar de tarea de forma urgente.
+
+#### Caso de uso
+Mientras desarrolla una funcionalidad, aparece un error crítico en producción que debe corregirse inmediatamente sin mezclar el trabajo actual.
 
 ### 16. git tag
+crea etiquetas asociadas a commits específicos. Generalmente se utilizan para identificar versiones importantes del software como v1.0, v2.0 o lanzamientos oficiales.
+
+#### Caso de uso
+Una empresa libera oficialmente la primera versión estable de su aplicación y desea marcar ese momento en el historial.
 
 ### 17. git fetch
+Descarga información nueva desde un repositorio remoto, incluyendo commits, ramas y referencias, sin modificar la rama actual. Permite inspeccionar cambios remotos antes de decidir si deben integrarse al trabajo local.
+
+#### Caso de uso
+Un desarrollador quiere revisar las actualizaciones realizadas por sus compañeros antes de incorporarlas a su copia local.
 
 ### 18. git pull
+Combina dos operaciones: primero ejecuta un fetch para descargar cambios del servidor remoto y luego realiza automáticamente un merge para integrarlos en la rama local. Es una forma rápida de actualizar el proyecto.
+
+#### Caso de uso
+Un desarrollador actualiza su repositorio para trabajar con la versión más reciente del código.
 
 ### 19. git push
+Envía los commits locales a un repositorio remoto. Gracias a este comando, otros miembros del equipo pueden acceder a los cambios realizados. Es el paso final para compartir trabajo en proyectos colaborativos.
+
+#### Caso de uso
+Después de completar una funcionalidad y verificar su correcto funcionamiento, el desarrollador la publica en el repositorio compartido de GitHub.
 
 ### 20. git bisect
+Es una herramienta avanzada de depuración que ayuda a localizar el commit exacto que introdujo un error. Utiliza un algoritmo de búsqueda binaria para reducir rápidamente el número de commits que deben revisarse. En lugar de inspeccionar manualmente cientos de versiones, Git va seleccionando puntos intermedios y pregunta si el error existe o no en cada uno de ellos.
+
+#### Caso de uso
+Una aplicación funcionaba correctamente hace dos semanas, pero actualmente presenta fallos. Existen demasiados commits realizados desde entonces y se necesita encontrar cuál introdujo el problema.
