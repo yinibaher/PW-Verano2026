@@ -1,0 +1,13 @@
+body{
+    background: rgb(180, 218, 219);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div{
+    background: white;
+    display: block;
+    margin-block: 50px;
+    margin-inline: 100px;
+    padding: 20px;
+    border-radius: 20px;
+}
