@@ -112,7 +112,6 @@ td{
     background: #f7f7f7;
 }
 
-
 /* Formulario */
 fieldset{
     border: 2px solid darkslateblue;
@@ -133,19 +132,12 @@ input, select, textarea{
     font-size: 15px;
 }
 
-textarea{
-    resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
+input:focus, select:focus, textarea:focus{
     outline: none;
     border-color: darkslateblue;
 }
 
 /* Botones */
-
 input[type="submit"],
 input[type="reset"]{
     background: darkslateblue;
@@ -162,16 +154,10 @@ input[type="reset"]:hover{
 }
 
 /* Enlaces */
-
 a{
     color: darkblue;
 }
 
 a:hover{
     color: darkslateblue;
-}
-
-/* Pie */
-#Contacto{
-    text-align: center;
 }
