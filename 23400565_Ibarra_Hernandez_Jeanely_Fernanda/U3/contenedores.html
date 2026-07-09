@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <style>
+        .flex-container{
+            display: flex;
+            gap: 15px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: bisque;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .grid-item{
+            background-color: darkolivegreen;
+            color: white;
+        }
+
+        @media(max-width:750px){
+            .flex-container{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:350px){
+            .flex-container{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    </style>
+    <body>
+        <h1>Contenedores, Flexbox y Grid</h1>
+        <!--Contenedores-->>
+        <div class="seccion">
+            <h2>¿Qué es un contenedor?</h2>
+            <p> Un contenedor es un elemento HTML que agrega
+                Generalmente se utiliza la etiqueta
+            </p>
+
+        </div>
+    </body>
+</html>
