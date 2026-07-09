@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login X</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Segoe UI, Arial, sans-serif;
+            letter-spacing: 0.5px;
+            
+        }
+        #main{
+            display: flex;
+            margin: 0;
+            min-height: 90vh;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        #izq{
+            width: 80%;
+            display: flex;
+            margin: 0;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        #izq img{
+            width: 500px;
+        }
+
+        h1{
+            margin-bottom: 0px;
+        }
+
+        .registrar{
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+            width: 80%;
+        
+        }
+
+        .registrar button{
+            border: none;
+            border-radius: 16px;
+            padding-block: 10px;
+            font-size: medium;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .separador{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-block: 20px;
+            width: 80%;
+        }
+
+        .separador hr{
+            flex: 1;
+            border: none;
+            border-top: 2px solid #3b3838;
+            border-radius: 2px;
+        }
+
+        .separador span{
+            font-size:medium;
+            font-weight: bold;
+        }
+
+        .crear{
+            border: none;
+            border-radius: 16px;
+            padding-block: 10px;
+            font-size: medium;
+            font-weight: bold;
+            background-color: rgb(93, 144, 241);
+            color: white;
+            width: 80%; 
+        }
+
+        .nota{
+            font-size: small;
+            width: 80%;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .iniciar{
+            border: 2px solid white;
+            border-radius: 16px;
+            padding-block: 10px;
+            font-size: medium;
+            font-weight: bold;
+            background-color: transparent ;
+            color: rgb(93, 144, 241);
+            width: 80%; 
+        }
+
+        .azul{
+            color: rgb(93, 144, 241);
+        }
+
+        footer {
+            color:grey;
+            font-size: small;
+            text-align: center;  
+            padding-inline: 20px;     
+        }
+
+        a{
+          color:grey; 
+          text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        @media (max-width: 850px){
+            #main{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            #izq{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            #izq img{
+                width: 180px;
+            }
+
+            #der{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <main id="main">
+        <section id="izq">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/X_icon.svg/960px-X_icon.svg.png">
+        </section>
+        <section id="der">
+            <h1>Lo que está pasando ahora</h1>
+            <h2>Únete hoy</h2>
+            <div class="registrar">
+                <button>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" height="20px">
+                    Registrarse con Google
+                </button>
+                <button>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" height="20px">
+                    Registrarse con Apple
+                </button>
+            </div>
+            <div class="separador">
+                <hr>
+                <span>o</span>
+                <hr>
+            </div>
+            <button class="crear">
+                Crear cuenta
+            </button>
+            <p class="nota">Al registrarte, aceptas los <span class="azul">Términos de servicio</span>
+                y la <span class="azul">Política de privacidad</span>, incluida la política de Uso de Cookies.
+            </p>
+            <h3>¿Ya tienes una cuenta?</h3>
+            <button class="iniciar">Iniciar sesión</button>
+         </section>
+    </main>
+    <footer>
+        <p><a href = "#info">Información</a> |  
+           <a href = "#descarga">Descarga la app de X</a> |
+           <a href = "#grok">Grok</a> |
+           <a href = "#ayuda">Centro de ayuda</a> |
+           <a href = "#condiciones">Condiciones de Servicio</a> |
+           <a href = "#privacidad">Política de Privacidad</a> |
+           <a href = "#cookies">Política de Cookies</a> |
+           <a href = "#accesibilidad">Accesibilidad</a> |
+           <a href = "#anuncios">Información de anuncios</a> |
+           <a href = "#blog">Blog</a> |
+           <a href = "#empleos">Empleos</a> |
+           <a href = "#marcas">Recursos para marcas</a> |
+           <a href = "#publicidad">Publicidad</a> |
+           <a href = "#marketing">Marketing</a> |
+           <a href = "#empresas">X para empresas</a> |
+           <a href = "#desarrolladores">Desarrolladores</a> |
+           <a href = "#guia">Guía</a> |
+           <a href = "#config"> Configuración</a> | © 2026 X Corp.   
+        </p>
+    </footer>   
+</body>
+</html>
