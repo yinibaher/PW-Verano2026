@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas y series en línea</title>
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .encabezado{
+            background: #333 url('assets/main-hero-background.png') no-repeat center / cover;
+            color: white;
+            padding: 10px;
+        }
+
+        .inicio {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .inicio button{
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 6px;
+            padding-inline: 20px;
+            padding-block: 10px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+        }
+
+        .inicio button:hover{
+            background-color: #e7d9d954;     
+        }
+
+        .contenido{
+            width: 55%;
+            padding: 10px
+        }
+
+        .contenido a,p{
+            color: gainsboro;
+            font-size: small;
+        }
+
+        .suscribir{
+            display: flex;
+            gap: 0px;
+        }
+
+        .suscribir input{
+            width: 40%;
+            border: none;
+            padding: 10px;
+            color: white;
+            background-color: #2f2e31;            
+            border-top-left-radius: 6px ;
+            border-bottom-left-radius: 6px;
+        }
+
+        .suscribir input::placeholder{
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .suscribir button{
+            border: none;
+            background-color: aqua;
+            letter-spacing: 0.5px; 
+            border-top-right-radius: 6px; 
+            border-bottom-right-radius: 6px;      
+        }
+
+        .starwars{   
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;         
+            background-color: black;
+            color: white;
+        }
+
+        .starwars img{
+            height: 800px;
+        }
+
+        .starwars h1{
+            margin-bottom: 0px;
+            font-size: 42px;
+        }
+
+        .solo{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .solo p {
+            font-size: larger;
+            text-align: left;
+            
+        }
+
+        .poster{
+            position: relative;
+        }
+
+        .poster img{
+            width: 100%;
+            display: block;
+        }
+
+        .texto{
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .catalogo{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: black;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pelicula{
+            width: 130px;
+            color: white;
+        }
+
+        .pelicula img{
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform .3s;
+        }
+
+        .pelicula img:hover{
+            transform: scale(1.1);
+        }
+
+        .pelicula p{
+            text-align: center;
+            font-size: 12px;
+            margin-top: 8px;
+            line-height: 1.3;
+        }    
+
+        .planes {
+            background-color: #06070f;
+            color: #fff;
+            padding: 50px 40px 70px;
+            text-align: center;
+        }
+
+        .planes h2 {
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .planes p {
+            font-size: 15px;
+            color: gainsboro;
+            margin-top: 10px;
+            margin-bottom: 35px;
+        }
+
+        .planes-tabla {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .planes-tabla th,
+        .planes-tabla td {
+            padding: 20px;
+            border: 1px solid #1f2233;
+            font-size: 14px;
+        }
+
+        .planes-tabla th:first-child,
+        .planes-tabla td:first-child {
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .planes-tabla thead th {
+            background-color: #14172a;
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .planes-tabla thead th.activo {
+            background-color: #3b6df0;
+        }
+
+        .planes-tabla .precio td {
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .deporte{
+            background: black;
+            color: white;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            padding-inline: 100px;
+        }
+
+        .sports{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: black;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .sports img{
+            width: 350px;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform .3s;
+        }
+
+        .sports img:hover{
+            transform: scale(1.08);
+        }
+
+         .favoritos {
+            background-color: black;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .favoritos p {
+            font-size: 15px;
+            color: gainsboro;
+        }
+
+        .favoritos img {
+            max-width: 900px;
+            width: 100%;
+        }
+        .pie{
+            color: grey;
+            text-align: center;
+            background: black;
+        }
+        .pie hr{
+            border-color: gray;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="inicio">
+            <button>INICIO SESIÓN</button>
+        </div> 
+        
+        <div class="contenido">
+            <img class="logo" width="90px" src="assets\disney-plus-logo.png" alt="Logo Disney">
+            <h1>Series exclusivas, éxitos del cine, el deporte de ESPN y más</h1>
+            
+            <div class="suscribir">
+                <input type="text" placeholder="Correo electrónico">
+                <button>SUSCRIBIRME AHORA</button>
+            </div>
+            
+            <p>
+                Ahorra desde 30% en <span><a href="#">Disney+ Premium Anual</a></span><br>
+                <a href="#">Ver detalles de los planes</a>        
+            </p>
+            <img img height="20px" src="assets/icons.webp">
+        </div> 
+    </header>
+    <main>
+        <section class="starwars">
+            <h1>Solo en Disney+</h1>
+            <p>¡Las mejores producciones originales y exclusivas!</p>
+            <div class="poster">
+                <p class="texto">Star Wars: The Complete Saga</p>
+                <img src="assets/starwars.png" alt="Star Wars">
+            </div>            
+        </section>
+        <section class="catalogo">
+            <div class="pelicula">
+                <img src="assets/1.webp" alt="Avatar">
+                <p>Avatar Fuego y Cenizas</p>
+            </div>
+
+            <div class="pelicula">
+                <img src="assets/2.webp" alt="Toy Story 3">
+                <p>Toy Story 3</p>
+            </div>
+
+            <div class="pelicula">
+                <img src="assets/3.webp" alt="Toy Story 2">
+                <p>Toy Story 2</p>
+            </div>
+
+            <div class="pelicula">
+                <img src="assets/4.webp" alt="Hoppers">
+                <p>Hoppers Operación Castor</p>
+            </div>
+
+            <div class="pelicula">
+                <img src="assets/5.webp" alt="Toy Story">
+                <p>Toy Story</p>
+            </div>
+
+            <div class="pelicula">
+                <img src="assets/6.webp" alt="Toy Story 4">
+                <p>Toy Story 4</p>
+            </div>
+
+            <div class="pelicula">
+                <img src="assets/7.webp" alt="Ready or Not">
+                <p>Ready Or Not 2: Here I Come</p>
+            </div>
+        </section>
+        <section class="planes">
+            <h2>¿Qué planes vas a elegir?</h2>
+            <p>Podras modificarlo o cancelarlo cuando quieras</p>
+            <table class="planes-tabla">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="activo">PREMIUM</th>
+                    <th>ESTÁNDAR</th>
+                    <th>ESTÁNDAR CON ANUNCIOS</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="precio">
+                    <td></td>
+                    <td>MXN 339/mes (final)*</td>
+                    <td>MXN 259/mes (final)*</td>
+                    <td>MXN 159/mes (final)*</td>
+                </tr>
+                <tr>
+                    <td>Estrenos de películas, series originales y clásicos de Disney, Pixar, Marvel, Star Wars, National Geographic y Star</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                </tr>
+                <tr>
+                    <td>Películas y series sin interrupciones publicitarias***</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                    <td class="cross">-</td>
+                </tr>
+                <tr>
+                    <td>Calidad de video hasta 4K UHD/HDR y sonido Dolby Atmos****</td>
+                    <td class="check">✓</td>
+                    <td class="cross">-</td>
+                    <td class="cross">-</td>
+                </tr>
+                <tr>
+                    <td>Dispositivos para ver en simultáneo</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Descargas para ver tus favoritos sin conexión ni demoras</td>
+                    <td class="check">✓</td>
+                    <td class="check">✓</td>
+                    <td class="cross">-</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="deporte">
+            <h2>Ahora Disney+ tiene deporte en vivo</h2>
+            <p>Los torneos más importantes del mundo y los programas ESPN</p>
+            <div class="sports">
+                <img class="sport" src="assets/sports1.webp" alt="SerieA">
+                <img class="sport" src="assets/sports2.webp" alt="SerieA">
+                <img class="sport" src="assets/sports3.webp" alt="SerieA">
+                <img class="sport" src="assets/sports4.webp" alt="SerieA">
+                <img class="sport" src="assets/sports5.webp" alt="SerieA">
+                <img class="sport" src="assets/sports6.webp" alt="SerieA">  
+            </div>
+
+        </section>
+        <section class="favoritos">
+            <h2>Cuando y donde quieras</h2>
+            <p>Disfruta tus favoritos en cualquier momento y lugar.</p>
+            <img src="assets/favoritos.webp" alt="Disney+ en varios dispositivos">
+        </section>
+
+    </main>
+    <footer class="pie">
+        <hr>
+        <br>
+        <p>©2026 Disney. Todos los derechos reservados.</p>
+        <br>
+    </footer>        
+</body>
+</html>
