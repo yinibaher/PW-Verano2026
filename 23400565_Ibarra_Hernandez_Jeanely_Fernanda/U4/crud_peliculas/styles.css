@@ -53,26 +53,64 @@ h1{
 }
 
 table{
-    border: 2px solid rgb(20, 20, 42);
-    display: flex;
-    border-radius: 16px; 
-    border-collapse: separate; 
-    border-spacing: 0;              
-    border-radius: 16px;
-    text-align: center; 
     width: 100%;
     margin: auto;
-    overflow: hidden;  
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid rgb(20, 20, 42);
+    table-layout: fixed;
 }
 
-th{
+thead th{
     background-color: rgb(20, 20, 42);
     color: white;
-    padding: 12px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-td{
-    padding: 12px;
-    background: #f7f7f7;
+thead th:not(:last-child){
+    border-right: 1px solid white;
+}
+
+tbody td{
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #d6d6d6;
+    word-wrap: break-word;
+}
+
+tbody td:not(:last-child){
+    border-right: 1px solid #d6d6d6;
+}
+
+td button{
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 4px;
+    transition: .2s;
+}
+
+.editar{
+    background-color: #2196F3;
+    color: white;
+}
+
+.editar:hover{
+    background-color: #1976D2;
+}
+
+.eliminar{
+    background-color: #e53935;
+    color: white;
+}
+
+.eliminar:hover{
+    background-color: #c62828;
 }
