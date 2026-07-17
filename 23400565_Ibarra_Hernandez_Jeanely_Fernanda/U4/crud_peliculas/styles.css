@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(20, 20, 42);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor{
+    background-color: gainsboro;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+    display: block;
+}
+
+h1{
+    text-align: center;    
+}
+
+.form form{
+    background-color: rgb(20, 20, 42);
+    display: flex; 
+    justify-content: space-between;  
+    align-items: center; 
+    flex-wrap: wrap;
+    border-radius: 16px;
+    padding: 20px;
+    gap:20px;
+}
+
+.form input{
+    flex: 1;
+    color: white;
+    border-radius: 16px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.form input::placeholder{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.form button{
+    flex: 1;
+    border-radius: 16px;
+    border: 2px solid white;
+    background-color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table{
+    border: 2px solid rgb(20, 20, 42);
+    display: flex;
+    border-radius: 16px; 
+    border-collapse: separate; 
+    border-spacing: 0;              
+    border-radius: 16px;
+    text-align: center; 
+    width: 100%;
+    margin: auto;
+    overflow: hidden;  
+    margin-bottom: 30px; 
+}
+
+th{
+    background-color: rgb(20, 20, 42);
+    color: white;
+    padding: 12px;
+}
+
+td{
+    padding: 12px;
+    background: #f7f7f7;
+}
